@@ -1,5 +1,5 @@
 <template>
-    <el-menu :default-active="activeIndex" class="nav" mode="horizontal" @select="handleSelect" router>
+    <el-menu :default-active="activeIndex" class="nav" mode="horizontal" router>
         <el-menu-item><img src="../assets/logo.png" style="height: 30px;"></el-menu-item>
         <el-menu-item index="home">首页</el-menu-item>
         <el-menu-item index="tools">工具</el-menu-item>
@@ -17,11 +17,6 @@ export default {
         return {
             activeIndex: 'home',
         };
-    },
-    methods: {
-        handleSelect(key) {
-            console.log(key);
-        },
     },
     mounted() {
         //解决页面刷新，导航栏高亮消失的问题

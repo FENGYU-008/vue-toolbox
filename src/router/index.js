@@ -5,6 +5,7 @@ import Home from '../components/Home';
 import Tools from '../components/Tools';
 import About from '../components/About';
 
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -32,7 +33,7 @@ const routes = [
         meta: {
             title: '关于 - 工具箱'
         }
-    }
+    },
 ];
 
 const router = new VueRouter({
