@@ -1,7 +1,7 @@
 <template>
     <div>
-        <el-collapse>
-            <el-collapse-item>
+        <el-collapse v-model="activeNames">
+            <el-collapse-item name="common">
                 <template slot="title">
                     <i class="el-icon-sunrise"></i>&nbsp;常用应用
                 </template>
@@ -16,11 +16,13 @@
                         <el-card shadow="hover">计时器</el-card>
                     </el-col>
                     <el-col :span="6">
-                        <el-card shadow="hover">抖音无水印解析</el-card>
+                        <a @click="douyin">
+                            <el-card shadow="hover">抖音无水印解析</el-card>
+                        </a>
                     </el-col>
                 </el-row>
             </el-collapse-item>
-            <el-collapse-item>
+            <el-collapse-item name="other">
                 <template slot="title">
                     <i class="el-icon-more"></i>&nbsp;其他应用
                 </template>
@@ -37,8 +39,21 @@
 <script>
 export default {
     name: 'ToolsList',
+    data() {
+        return {
+            activeNames: ['common', 'other']
+        }
+    },
+    methods: {
+        douyin() {
+            this.$router.push('/douyin');
+        }
+    }
 }
 </script>
 
 <style>
+a {
+    text-decoration: none;
+}
 </style>

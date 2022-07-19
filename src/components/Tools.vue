@@ -1,5 +1,7 @@
 <template>
-    <ToolsList></ToolsList>
+    <div>
+        <ToolsList></ToolsList>
+    </div>
 </template>
 
 <script>
@@ -8,7 +10,7 @@ export default {
     name: "Tools",
     components: {
         ToolsList
-    }
+    },
 }
 </script>
 

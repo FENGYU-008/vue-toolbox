@@ -5,6 +5,7 @@ import Home from '../components/Home';
 import Tools from '../components/Tools';
 import About from '../components/About';
 
+import DouYin from '../components/tools/DouYin';
 
 Vue.use(VueRouter);
 
@@ -34,6 +35,10 @@ const routes = [
             title: '关于 - 工具箱'
         }
     },
+    {
+        path: '/douyin',
+        component: DouYin,
+    }
 ];
 
 const router = new VueRouter({
