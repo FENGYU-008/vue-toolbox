@@ -26,9 +26,7 @@
                 </template>
                 <el-row :gutter="20">
                     <el-col :span="6">
-                        <a @click="dingzhen">
-                            <el-card shadow="hover">一眼丁真</el-card>
-                        </a>
+                        <el-card shadow="hover">一眼丁真</el-card>
                     </el-col>
                 </el-row>
             </el-collapse-item>
@@ -38,7 +36,7 @@
 
 <script>
 export default {
-    name:'ToolsList'
+    name: 'ToolsList',
 }
 </script>
 

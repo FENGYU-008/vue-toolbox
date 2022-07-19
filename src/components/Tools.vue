@@ -1,14 +1,14 @@
 <template>
-    <div>
-        <ToolsList></ToolsList>
-    </div>
+    <ToolsList></ToolsList>
 </template>
 
 <script>
 import ToolsList from './tools/ToolsList.vue';
 export default {
     name: "Tools",
-    components: { ToolsList }
+    components: {
+        ToolsList
+    }
 }
 </script>
 
