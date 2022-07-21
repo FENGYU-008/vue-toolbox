@@ -2,17 +2,17 @@
     <div>
         <el-page-header @back="goBack" content="抖音短视频无水印解析"></el-page-header>
         <div class="main">
-            <el-card style="width:480px;" class="card">
+            <el-card class="card">
                 <el-form>
                     <el-form-item>
-                        <el-input v-model="url" placeholder="请在此粘贴您复制的抖音视频链接"></el-input>
+                        <el-input v-model="url" placeholder="请在此粘贴您复制的抖音视频链接" clearable></el-input>
                     </el-form-item>
                     <el-form-item>
                         <el-button type="primary" style="width:100%;" @click="get">获取</el-button>
                     </el-form-item>
                 </el-form>
             </el-card>
-            <el-card style="width:480px;" class="card">
+            <el-card class="card">
                 <div slot="header" class="clearfix">
                     <span>结果</span>
                     <el-button style="float: right; padding: 3px 0" type="text">复制到剪贴板</el-button>
@@ -49,8 +49,10 @@ export default {
             this.$router.push('/tools');
         },
         get() {
+            let regex = /(http:\/\/|https:\/\/)((\w|=|\?|\.|\/|&|-)+)/g;
+            this.url = this.url.match(regex) ? this.url.match(regex)[0] : '';
             if (this.url === '') {
-                this.$message.warning('链接不能为空');
+                this.$message.warning('请输入正确的链接');
                 return;
             }
             const loading = this.$loading({
@@ -100,9 +102,16 @@ export default {
 .card {
     margin: 20px;
     border-radius: 10px;
+    width: 500px;
 }
 
 .result {
     line-height: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
 }
 </style>
