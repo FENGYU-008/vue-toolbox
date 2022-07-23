@@ -15,7 +15,9 @@
             <el-card class="card">
                 <div slot="header" class="clearfix">
                     <span>结果</span>
-                    <el-button style="float: right; padding: 3px 0" type="text">复制到剪贴板</el-button>
+                    <el-button style="float: right; padding: 3px 0" type="text" v-clipboard:copy="play"
+                        v-clipboard:success="onCopy" v-clipboard:error="onError">复制到剪贴板
+                    </el-button>
                 </div>
                 <div class="result">
                     <div>标题：{{ title }}</div>
@@ -86,6 +88,12 @@ export default {
             } else if (type === 'play') {
                 window.open(this.play, '_blank');
             }
+        },
+        onCopy() {
+            this.$message.success('成功复制视频链接');
+        },
+        onError() {
+            this.$message.success('复制失败');
         },
     }
 }

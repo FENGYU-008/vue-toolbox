@@ -6,6 +6,8 @@ import Tools from '../components/Tools';
 import About from '../components/About';
 
 import DouYin from '../components/tools/DouYin';
+import ToDoList from '../components/tools/ToDoList';
+import ShortURL from '../components/tools/ShortURL';
 
 Vue.use(VueRouter);
 
@@ -38,6 +40,14 @@ const routes = [
     {
         path: '/douyin',
         component: DouYin,
+    },
+    {
+        path: '/todo',
+        component: ToDoList,
+    },
+    {
+        path: '/shorturl',
+        component: ShortURL,
     }
 ];
 

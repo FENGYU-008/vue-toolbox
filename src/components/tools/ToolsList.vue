@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <el-collapse v-model="activeNames">
             <el-collapse-item name="common">
                 <template slot="title">
@@ -7,13 +7,17 @@
                 </template>
                 <el-row :gutter="20">
                     <el-col :span="6">
-                        <el-card shadow="hover">短链接生成</el-card>
+                        <a @click="shorturl">
+                            <el-card shadow="hover">短链接生成</el-card>
+                        </a>
                     </el-col>
                     <el-col :span="6">
                         <el-card shadow="hover">历史上的今天</el-card>
                     </el-col>
                     <el-col :span="6">
-                        <el-card shadow="hover">计时器</el-card>
+                        <a @click="todo">
+                            <el-card shadow="hover">To Do</el-card>
+                        </a>
                     </el-col>
                     <el-col :span="6">
                         <a @click="douyin">
@@ -47,6 +51,12 @@ export default {
     methods: {
         douyin() {
             this.$router.push('/douyin');
+        },
+        todo() {
+            this.$router.push('/todo');
+        },
+        shorturl() {
+            this.$router.push('/shorturl');
         }
     }
 }
@@ -55,5 +65,9 @@ export default {
 <style>
 a {
     text-decoration: none;
+}
+
+.container {
+    user-select: none;
 }
 </style>
