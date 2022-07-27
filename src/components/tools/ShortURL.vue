@@ -70,7 +70,7 @@ export default {
             this.$message.success('复制成功');
         },
         onError() {
-            this.$message.success('复制失败');
+            this.$message.error('复制失败');
         },
     }
 }

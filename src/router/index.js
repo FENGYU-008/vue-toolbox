@@ -8,6 +8,7 @@ import About from '../components/About';
 import DouYin from '../components/tools/DouYin';
 import ToDoList from '../components/tools/ToDoList';
 import ShortURL from '../components/tools/ShortURL';
+import DingZhen from '../components/tools/DingZhen';
 
 Vue.use(VueRouter);
 
@@ -48,7 +49,11 @@ const routes = [
     {
         path: '/shorturl',
         component: ShortURL,
-    }
+    },
+    {
+        path: '/dingzhen',
+        component: DingZhen,
+    },
 ];
 
 const router = new VueRouter({

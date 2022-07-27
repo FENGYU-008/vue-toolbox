@@ -93,7 +93,7 @@ export default {
             this.$message.success('成功复制视频链接');
         },
         onError() {
-            this.$message.success('复制失败');
+            this.$message.error('复制失败');
         },
     }
 }

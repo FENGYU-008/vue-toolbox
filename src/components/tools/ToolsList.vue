@@ -32,7 +32,9 @@
                 </template>
                 <el-row :gutter="20">
                     <el-col :span="6">
-                        <el-card shadow="hover">一眼丁真</el-card>
+                        <a @click="dingzhen">
+                            <el-card shadow="hover">一眼丁真</el-card>
+                        </a>
                     </el-col>
                 </el-row>
             </el-collapse-item>
@@ -57,6 +59,9 @@ export default {
         },
         shorturl() {
             this.$router.push('/shorturl');
+        },
+        dingzhen() {
+            this.$router.push('/dingzhen');
         }
     }
 }
