@@ -7,12 +7,14 @@
                 </template>
                 <el-row :gutter="20">
                     <el-col :span="6">
-                        <a @click="shorturl">
-                            <el-card shadow="hover">短链接生成</el-card>
+                        <a @click="douyin">
+                            <el-card shadow="hover">抖音无水印解析</el-card>
                         </a>
                     </el-col>
                     <el-col :span="6">
-                        <el-card shadow="hover">历史上的今天</el-card>
+                        <a @click="shorturl">
+                            <el-card shadow="hover">短链接生成</el-card>
+                        </a>
                     </el-col>
                     <el-col :span="6">
                         <a @click="todo">
@@ -20,9 +22,7 @@
                         </a>
                     </el-col>
                     <el-col :span="6">
-                        <a @click="douyin">
-                            <el-card shadow="hover">抖音无水印解析</el-card>
-                        </a>
+                        <el-card shadow="hover">历史上的今天</el-card>
                     </el-col>
                 </el-row>
             </el-collapse-item>

@@ -45,6 +45,7 @@ export default {
                 .catch((err) => {
                     this.$message.error(err.message);
                     console.log(err);
+                    loading.close();
                 });
         },
     }
@@ -53,7 +54,14 @@ export default {
 
 <style>
 .main {
-    margin-top: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 500px;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {

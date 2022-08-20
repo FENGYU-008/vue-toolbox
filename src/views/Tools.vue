@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ToolsList from './tools/ToolsList.vue';
+import ToolsList from '@/components/ToolsList.vue';
 export default {
     name: "Tools",
     components: {
