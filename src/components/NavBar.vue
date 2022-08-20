@@ -44,15 +44,14 @@ export default {
     },
     mounted() {
         //解决页面刷新，导航栏高亮消失的问题
-        this.$router.onReady(() => {
-            let path = this.$route.path;
-            let index = path.substring(1, path.length);
-            if (['home', 'tools', 'about'].indexOf(index) == -1) {
-                this.activeIndex = 'tools';
-            } else {
-                this.activeIndex = index;
-            }
-        });
+        console.log(this.$route.path)
+        let path = this.$route.path;
+        let index = path.substring(1, path.length);
+        if (['home', 'tools', 'about'].indexOf(index) == -1) {
+            this.activeIndex = 'tools';
+        } else {
+            this.activeIndex = index;
+        }
     },
 }
 </script>

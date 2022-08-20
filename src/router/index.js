@@ -1,6 +1,15 @@
 import VueRouter from 'vue-router';
 import Vue from 'vue';
 
+import Home from '@/views/Home.vue'
+import Tools from '@/views/Tools.vue'
+import About from '@/views/About.vue'
+import DouYin from '@/views/tools/DouYin.vue'
+import ShortURL from '@/views/tools/ShortURL.vue'
+import Todo from '@/views/tools/ToDoList.vue'
+import DingZhen from '@/views/tools/DingZhen.vue'
+
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -10,40 +19,40 @@ const routes = [
     },
     {
         path: '/home',
-        component: () => import('@/views/Home.vue'),
+        component: Home,
         meta: {
             title: '首页 - 工具箱'
         }
     },
     {
         path: '/tools',
-        component: () => import('@/views/Tools.vue'),
+        component: Tools,
         meta: {
             title: '工具 - 工具箱'
         }
     },
     {
         path: '/about',
-        component: () => import('@/views/About.vue'),
+        component: About,
         meta: {
             title: '关于 - 工具箱'
         }
     },
     {
         path: '/douyin',
-        component: () => import('@/views/tools/DouYin.vue'),
+        component: DouYin,
     },
     {
         path: '/shorturl',
-        component: () => import('@/views/tools/ShortURL.vue'),
+        component: ShortURL,
     },
     {
         path: '/todo',
-        component: () => import('@/views/tools/ToDoList.vue'),
+        component: Todo,
     },
     {
         path: '/dingzhen',
-        component: () => import('@/views/tools/DingZhen.vue'),
+        component: DingZhen,
     },
 ];
 
